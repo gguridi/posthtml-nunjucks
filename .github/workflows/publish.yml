@@ -1,0 +1,44 @@
+name: Publish
+
+on:
+    release:
+        types:
+            - created
+
+jobs:
+    mockserver-test:
+        name: Unit Tests
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                nodejs: [11, 12, 13, 14]
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.nodejs }}
+            - name: install dependencies
+              run: npm install
+            - name: run tests
+              run: npm test
+
+    publish:
+        needs:
+            - mockserver-test
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: set version envvar
+              run: echo "RELEASE_VERSION=$(echo ${GITHUB_REF:11})" >> $GITHUB_ENV
+            - name: set release version on package.json
+              run: sed -i.bak 's/0\.0\.0/'$RELEASE_VERSION'/g' package.json
+            - name: check package
+              run: cat package.json
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: 13
+            - name: install dependencies
+              run: npm install
+            - uses: JS-DevTools/npm-publish@v1
+              with:
+                  token: ${{ secrets.NPM_TOKEN }}
