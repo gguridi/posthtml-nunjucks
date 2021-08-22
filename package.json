@@ -1,34 +1,42 @@
 {
-  "name": "posthtml-nunjucks",
-  "description": "PostHTML nunjucks plugin.",
-  "version": "0.0.0",
-  "license": "MIT",
-  "author": "PostHTML (https://github.com/gguridi)",
-  "bugs": "https://github.com/gguridi/posthtml-nunjucks/issues",
-  "homepage": "https://github.com/gguridi/posthtml-nunjucks",
-  "repository": "gguridi/posthtml-nunjucks",
-  "main": "lib",
-  "type": "module",
-  "engines": {
-    "node": ">=10"
-  },
-  "scripts": {
-    "test": "jest"
-  },
-  "keywords": [
-    "html",
-    "posthtml",
-    "posthtml-plugin",
-    "nunjucks"
-  ],
-  "devDependencies": {
-    "jest": "^27.0.6",
-    "posthtml": "^0.15.1"
-  },
-  "dependencies": {
-    "debug": "^4.3.2",
-    "nunjucks": "^3.2.3",
-    "posthtml-parser": "^0.10.0",
-    "posthtml-render": "^3.0.0"
-  }
+    "name": "posthtml-nunjucks",
+    "description": "PostHTML nunjucks plugin.",
+    "version": "0.0.0",
+    "license": "MIT",
+    "author": "PostHTML (https://github.com/gguridi)",
+    "bugs": "https://github.com/gguridi/posthtml-nunjucks/issues",
+    "homepage": "https://github.com/gguridi/posthtml-nunjucks",
+    "repository": "gguridi/posthtml-nunjucks",
+    "main": "lib",
+    "type": "module",
+    "engines": {
+        "node": ">=10"
+    },
+    "scripts": {
+        "test": "jest"
+    },
+    "keywords": [
+        "html",
+        "posthtml",
+        "posthtml-plugin",
+        "nunjucks"
+    ],
+    "devDependencies": {
+        "codecov": "^3.8.3",
+        "jest": "^27.0.6",
+        "posthtml": "^0.15.1"
+    },
+    "dependencies": {
+        "debug": "^4.3.2",
+        "nunjucks": "^3.2.3",
+        "posthtml-parser": "^0.10.0",
+        "posthtml-render": "^3.0.0"
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "lib/**"
+        ],
+        "coverageDirectory": "./coverage/",
+        "collectCoverage": true
+    }
 }

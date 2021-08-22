@@ -3,10 +3,10 @@
   <h1>PostHTML Nunjucks Plugin</h1>
   <p>A PostHTML plugin wrapping Nunjucks library.</p>
 
-[![Version][npm-version-shield]][npm]
-[![Build][github-ci-shield]][github-ci]
-[![License][license-shield]][license]
-[![Downloads][npm-stats-shield]][npm-stats]
+![npm](https://img.shields.io/npm/v/posthtml-nunjucks)
+![GitHub](https://img.shields.io/github/license/gguridi/posthtml-nunjucks)
+[![Publish](https://github.com/gguridi/posthtml-nunjucks/actions/workflows/publish.yml/badge.svg?branch=master)](https://github.com/gguridi/posthtml-nunjucks/actions/workflows/publish.yml)
+[![codecov](https://codecov.io/gh/gguridi/posthtml-nunjucks/branch/master/graph/badge.svg?token=BODGILME44)](https://codecov.io/gh/gguridi/posthtml-nunjucks)
 
 </div>
 
