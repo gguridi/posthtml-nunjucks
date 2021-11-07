@@ -3,7 +3,7 @@
   <h1>PostHTML Nunjucks Plugin</h1>
   <p>A PostHTML plugin wrapping Nunjucks library.</p>
 
-![npm](https://img.shields.io/npm/v/posthtml-nunjucks)
+[![npm](https://img.shields.io/npm/v/posthtml-nunjucks)](https://www.npmjs.com/package/posthtml-nunjucks)
 ![GitHub](https://img.shields.io/github/license/gguridi/posthtml-nunjucks)
 [![Publish](https://github.com/gguridi/posthtml-nunjucks/actions/workflows/publish.yml/badge.svg?branch=master)](https://github.com/gguridi/posthtml-nunjucks/actions/workflows/publish.yml)
 [![codecov](https://codecov.io/gh/gguridi/posthtml-nunjucks/branch/master/graph/badge.svg?token=BODGILME44)](https://codecov.io/gh/gguridi/posthtml-nunjucks)
@@ -38,7 +38,7 @@ $ npm i posthtml posthtml-nunjucks
 
 ## Usage
 
-Provide clear code samples showing how to use the plugin:
+A simple plugin usage would be:
 
 ```js
 const posthtml = require('posthtml');
